@@ -24,7 +24,7 @@ public class HubCommand implements RawCommand {
         Optional <RegisteredServer> toConnect = server.getServer(serverName);
         if (!toConnect.isPresent()) {
             player.sendMessage(
-                    Component.text("De server " + serverName + " bestaat niet.", NamedTextColor.RED));
+                    Component.text("Sending you to the Hub!", NamedTextColor.RED));
             return;
         }
         player.createConnectionRequest(toConnect.get()).fireAndForget();
